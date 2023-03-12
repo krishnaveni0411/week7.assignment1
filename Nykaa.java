@@ -22,7 +22,7 @@ public static void main(String[] args) throws InterruptedException  {
 	WebElement brand = driver.findElement(By.xpath("//a[text()='brands']"));
 	WebElement brandSearch = driver.findElement(By.xpath("//div[@id='list_topbrands']//following::div[6]/a"));
 	Actions builder=new Actions(driver);
-	builder.moveToElement(brand).sendKeys(brandSearch,Keys.ENTER).perform();
+	builder.moveToElement(brand).click(brandSearch).perform();
 	Thread.sleep(2000);
 	 driver.findElement(By.xpath("//span[@class='sort-name']")).click();
 	 driver.findElement(By.xpath("//label[@class='control control-radio']//following::label[3]/div[2]")).click();
